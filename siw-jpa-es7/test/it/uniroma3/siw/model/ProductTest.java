@@ -38,11 +38,12 @@ class ProductTest {
 	@BeforeEach
 	void tableSetUp() throws Exception{
 		tx.begin();
-		em.clear();
+		em.remove(p);
+		em.remove(p1);
 		tx.commit();
 		tx.begin();
-		em.persist(p);
-		em.persist(p1);
+		em.merge(p); //inserito merge per passare dallo stato deatached --> persist
+		em.merge(p1); //chiedere al prof. perchè persist non funziona
 		tx.commit();
 	}
 	
@@ -60,6 +61,24 @@ class ProductTest {
 		int deletedRows = deleteQuery.executeUpdate(); //eseguo l'eliminazione
 		tx.commit();
 		assertEquals("Non sono stati cancellati i due prodotti dalla tabella", deletedRows, 2);
+	}
+	
+	@Test
+	void testNamedQuery() {
+		Query deleteQuery = em.createNamedQuery("deleteAllProducts");
+		tx.begin();
+		int deletedRows = deleteQuery.executeUpdate();
+		tx.commit();
+		assertEquals("Non sono stati eliminati i due prodotti dalla tabella", deletedRows, 2);
+	}
+	
+	@Test 
+	void testNamedQuery2() {
+		Query deleteQuery = em.createNamedQuery("deleteAllProducts");
+		tx.begin();
+		int deletedRows = deleteQuery.executeUpdate();
+		tx.commit();
+		assertEquals("Non sono stati elminiati i due prodotti dalla tabella", deletedRows, 2);
 	}
 
 }

@@ -5,13 +5,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQuery;
-
-import java.util.List;
-
 import javax.persistence.Column;
 
 @Entity
-@NamedQuery(name = "deleteAllProducts", query = "DELETE FROM Product p") //si utilizza nel test
+@NamedQuery(name = "findAllProducts", query = "SELECT p FROM Product p") //si utilizza nel test
 @NamedQuery(name = "findProductsPriceLessThan", query = "SELECT p.price FROM Product p WHERE p.price < :value")
 public class Product {
 
@@ -21,7 +18,7 @@ public class Product {
 
     private String name;
 
-    private Float price;
+     private Float price;
 
     @Column(length = 2000)
     private String description;
@@ -97,5 +94,4 @@ public class Product {
         sb.append("}\n");
         return sb.toString();
     }
-    
 }
