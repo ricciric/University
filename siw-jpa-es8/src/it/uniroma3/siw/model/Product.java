@@ -9,7 +9,7 @@ import javax.persistence.Column;
 
 @Entity
 @NamedQuery(name = "findAllProducts", query = "SELECT p FROM Product p") //si utilizza nel test
-@NamedQuery(name = "findProductsPriceLessThan", query = "SELECT p.price FROM Product p WHERE p.price < :value")
+@NamedQuery(name = "findProductsPriceLessThan", query = "SELECT p FROM Product p WHERE p.price < :value")
 public class Product {
 
     @Id
