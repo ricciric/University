@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="ant2020/ant/src"/>
+	<classpathentry kind="src" path="ant2020/ant/test"/>
+	<classpathentry kind="src" path="siw-jpa-Es3/src"/>
+	<classpathentry kind="src" path="siw-jpa-es7/src"/>
+	<classpathentry kind="src" path="siw-jpa-es7/test"/>
+	<classpathentry kind="src" path="siw-jpa-es8/src"/>
+	<classpathentry kind="src" path="siw-jps-Es(2-4)/src"/>
+	<classpathentry kind="src" path="siw-jps-Es(2-4)/test"/>
+	<classpathentry kind="src" path="siw-jps-Es1/src"/>
+	<classpathentry kind="src" path="siw-jps-Es1/test"/>
+	<classpathentry kind="output" path="ant2020/bin"/>
+</classpath>
