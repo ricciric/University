@@ -57,9 +57,6 @@ import org.junit.Test;
 
 public class InvertedIndex {
 
-
-
-
         //StopWords List
         public static final CharArraySet STOP_WORDS = new CharArraySet(Arrays.asList(
                 "in", "dei", "di", "un", "una", "e", "il", "la", "in",
